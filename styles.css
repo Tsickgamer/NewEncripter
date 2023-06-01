@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #e4e3e2;
+}
+
+.texto {
+  position: absolute;
+  width: 45%;
+  height: 63%;
+  left: 8%;
+  top: 12%;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: #e4e3e2;
+}
+.texto::placeholder {
+  color: #0a3871;
+}
+.texto:focus,
+.texto:active {
+  border: none;
+  outline: none;
+}
+
+.terminos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 80%;
+  left: 8%;
+  top: 80%;
+}
+
+.terminos p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1% 0;
+  position: absolute;
+  width: 80%;
+  left: 12%;
+  top: 82%;
+}
+
+.btnEncriptar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5%;
+  gap: 8%;
+  width: 9%;
+  background-color: #ee7128;
+  border: none;
+  border-radius: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: 18px;
+  font-size: 20px;
+  line-height: 2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btnDesencriptar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5%;
+  gap: 8%;
+  width: 9%;
+  margin-left: 10px;
+  background-color: #70472f;
+  border: none;
+  border-radius: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: 18px;
+  font-size: 20px;
+  line-height: 2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btnCopiar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5%;
+  gap: 8%;
+  width: 9%;
+  margin-left: 10px;
+  background-color: #dbc45f;
+  border: none;
+  border-radius: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: 18px;
+  font-size: 20px;
+  line-height: 2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btnEncriptar:hover,
+.btnDesencriptar:hover,
+.btnCopiar:hover {
+  margin: 0.1%;
+  width: 10%;
+  padding: 1.48%;
+}
+
+.encriptado {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 30%;
+  height: 90%;
+  left: 60%;
+  top: 5%;
+  background-color: #ffffff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+  border-radius: 32px;
+}
+
+.mensajeEncriptado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  gap: 16px;
+  position: absolute;
+  width: 100%;
+  top: 65%;
+  text-align: center;
+}
+
+.mensajeEncriptado h2 {
+  width: 60%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #3a3f44;
+}
+
+.mensajeEncriptado p {
+  width: 80%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+  opacity: 0.8;
+}
+
+.encriptado img {
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  top: 8%;
+}
+
+/* Diseno de respuesta para dispositivos*/
+@media (max-width: 57.5em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .encriptar {
+    width: 100%;
+  }
+  .texto {
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 5%;
+  }
+  .terminos {
+    width: 80%;
+    left: 10%;
+    top: 67%;
+  }
+  .terminos p {
+    font-size: 16px;
+  }
+  .botones {
+    width: 80%;
+    left: 10%;
+    top: 70%;
+  }
+
+  .btnEncriptar,
+  .btnDesencriptar,
+  .btnCopiar {
+    width: 48%;
+    border-radius: 16px;
+  }
+  .btnEncriptar:hover,
+  .btnDesencriptar:hover,
+  .btnCopiar:hover {
+    margin: 0.3%;
+    width: 47.5%;
+    padding: 1.8%;
+  }
+
+  .encriptado {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    top: 80%;
+  }
+  .mensajeEncriptado {
+    width: 100%;
+    top: 5%;
+  }
+
+  .encriptado img {
+    top: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Hasta aca termina el diseno para dispositivos*/
